@@ -1,0 +1,155 @@
+{
+  "nom_modele": "Random Forest Regressor",
+  "type_estimator": "RandomForestRegressor",
+  "parametres_estimator": {
+    "bootstrap": true,
+    "ccp_alpha": 0.0,
+    "criterion": "squared_error",
+    "max_depth": null,
+    "max_features": 1.0,
+    "max_leaf_nodes": null,
+    "max_samples": null,
+    "min_impurity_decrease": 0.0,
+    "min_samples_leaf": 1,
+    "min_samples_split": 2,
+    "min_weight_fraction_leaf": 0.0,
+    "monotonic_cst": null,
+    "n_estimators": 60,
+    "n_jobs": -1,
+    "oob_score": false,
+    "random_state": 42,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "etapes_pipeline": [
+    "transformer",
+    "estimator"
+  ],
+  "date_export": "2026-09-27T18:56:17",
+  "version_sklearn": "1.9.1",
+  "features": {
+    "colonnes_attendues": [
+      "Unnamed: 0",
+      "airline",
+      "flight",
+      "source_city",
+      "departure_time",
+      "stops",
+      "arrival_time",
+      "destination_city",
+      "class",
+      "duration",
+      "days_left"
+    ],
+    "nombre_colonnes": 11,
+    "colonnes_utilisees_par_le_transformer": [
+      "duration",
+      "days_left",
+      "stops",
+      "class",
+      "airline",
+      "source_city",
+      "destination_city",
+      "departure_time",
+      "arrival_time"
+    ],
+    "cible": "price",
+    "colonnes_ignorees_par_le_transformer": [
+      "Unnamed: 0",
+      "flight"
+    ]
+  },
+  "colonnes": {
+    "numeriques": [
+      "duration",
+      "days_left"
+    ],
+    "ordinales": [
+      "stops",
+      "class"
+    ],
+    "nominales": [
+      "airline",
+      "source_city",
+      "destination_city",
+      "departure_time",
+      "arrival_time"
+    ]
+  },
+  "ordre_categories_ordinales": {
+    "stops": [
+      "zero",
+      "one",
+      "two_or_more"
+    ],
+    "class": [
+      "Economy",
+      "Business"
+    ]
+  },
+  "categories_possibles_nominales": {
+    "airline": [
+      "AirAsia",
+      "Air_India",
+      "GO_FIRST",
+      "Indigo",
+      "SpiceJet",
+      "Vistara"
+    ],
+    "source_city": [
+      "Bangalore",
+      "Chennai",
+      "Delhi",
+      "Hyderabad",
+      "Kolkata",
+      "Mumbai"
+    ],
+    "destination_city": [
+      "Bangalore",
+      "Chennai",
+      "Delhi",
+      "Hyderabad",
+      "Kolkata",
+      "Mumbai"
+    ],
+    "departure_time": [
+      "Afternoon",
+      "Early_Morning",
+      "Evening",
+      "Late_Night",
+      "Morning",
+      "Night"
+    ],
+    "arrival_time": [
+      "Afternoon",
+      "Early_Morning",
+      "Evening",
+      "Late_Night",
+      "Morning",
+      "Night"
+    ]
+  },
+  "metriques_test": {
+    "MAE": 1080.1541443360525,
+    "RMSE": 2795.7208403202408,
+    "R2": 0.9848373932184176,
+    "nombre_observations_test": 60031,
+    "IC95_MAE": {
+      "borne_basse": 1059.5259799648306,
+      "borne_haute": 1100.7823087072743,
+      "z": 1.96,
+      "methode": "MAE +/- z * (ecart-type des erreurs absolues) / racine(n)",
+      "ecart_type_erreurs": 2578.6494155129462,
+      "erreur_standard": 10.524573658786677
+    }
+  },
+  "taille_dataset": {
+    "total": 300153,
+    "train": 240122,
+    "test": 60031
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42
+  }
+}

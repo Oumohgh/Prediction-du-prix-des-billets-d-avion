@@ -2,4 +2,12 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
+.venv/
+venv/
+
 .DS_Store
+
+.env
+*.env
+# Modele >100 Mo : trop volumineux pour Git
+artifacts/*.joblib
